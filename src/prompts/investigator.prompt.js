@@ -120,24 +120,24 @@ function buildUserMessage(ticketData) {
     transaction_history,
   } = ticketData;
 
+  // Compact transaction history to reduce tokens
   const txHistory =
     transaction_history && transaction_history.length > 0
-      ? JSON.stringify(transaction_history, null, 2)
-      : 'No transaction history provided.';
+      ? transaction_history.map(tx =>
+        `ID:${tx.transaction_id} Time:${tx.timestamp} Type:${tx.type} Amount:${tx.amount}BDT To:${tx.counterparty} Status:${tx.status}`
+      ).join('\n')
+      : 'NONE';
 
-  return `TICKET ID: ${ticket_id}
-LANGUAGE: ${language || 'en'}
-CHANNEL: ${channel || 'unknown'}
-USER TYPE: ${user_type || 'unknown'}
-CAMPAIGN CONTEXT: ${campaign_context || 'none'}
+  // Compact format to reduce input tokens and improve p95 latency
+  return `TICKET:${ticket_id} | LANG:${language || 'en'} | CHANNEL:${channel || 'unknown'} | USER:${user_type || 'customer'} | CAMPAIGN:${campaign_context || 'none'}
 
-CUSTOMER COMPLAINT:
+COMPLAINT:
 ${complaint}
 
-RECENT TRANSACTION HISTORY:
+TRANSACTIONS:
 ${txHistory}
 
-Investigate this case and return your analysis as a JSON object following the exact output format specified.`;
+Return JSON investigation now.`;
 }
 
 module.exports = { SYSTEM_PROMPT, buildUserMessage };

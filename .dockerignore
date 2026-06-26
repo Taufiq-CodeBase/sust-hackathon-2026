@@ -1,0 +1,15 @@
+node_modules
+.env
+.env.local
+*.log
+coverage
+.DS_Store
+.git
+.gitignore
+tests
+*.test.js
+README.md
+RUNBOOK.md
+ARCHITECTURE.md
+SECURITY.md
+test-llm-direct.js

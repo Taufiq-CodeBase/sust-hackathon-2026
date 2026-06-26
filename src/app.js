@@ -46,6 +46,14 @@ app.use(express.urlencoded({ extended: false, limit: '1mb' }));
 // ─── Request Logging ──────────────────────────────────────────────────────────
 app.use(requestLogger);
 
+// Adds request tracing for security monitoring
+const { v4: uuidv4 } = require('uuid');
+app.use((req, res, next) => {
+  req.requestId = uuidv4();
+  res.setHeader('X-Request-ID', req.requestId);
+  next();
+});
+
 // ─── Routes ───────────────────────────────────────────────────────────────────
 app.get('/health', healthCheck);
 app.post('/analyze-ticket', analyzeLimiter, analyzeTicket);
