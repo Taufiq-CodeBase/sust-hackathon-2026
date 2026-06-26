@@ -6,13 +6,25 @@ An AI-powered complaint investigation API for fintech support teams. Built for t
 
 Accepts customer support tickets with transaction history, investigates whether the complaint is supported by transaction data, and returns structured routing and response guidance — safely.
 
+## Importing and Evaluating Postman Collection
+
+1. Open Postman and click **Import** in the top-left corner.  
+2. Select the `QueueStorm_Copilot.postman_collection.json` file.  
+3. Review the imported collection in the left sidebar.  
+
+**To Judge APIs:**   
+- Verify status codes for each request.  
+- Inspect response bodies for accuracy and completeness.  
+- Evaluate error handling for invalid inputs.  
+
+
 ## Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
 | Runtime | Node.js 20 (LTS) |
 | Framework | Express.js 4.x |
-| AI Engine | OpenAI GPT-4o-mini |
+| AI Engine | `gpt-oss-120b-free` |
 | Validation | Zod |
 | Security | Helmet, CORS, express-rate-limit |
 | Logging | Winston + Morgan |
