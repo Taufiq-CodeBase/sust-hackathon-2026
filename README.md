@@ -34,7 +34,7 @@ Accepts customer support tickets with transaction history, investigates whether 
 
 ### Prerequisites
 - Node.js 18+ 
-- OpenAI API key
+- OpenRouter API key
 
 ### Local Setup
 
@@ -57,16 +57,7 @@ npm run dev
 npm test
 ```
 
-### Docker Setup
 
-```bash
-# Build and run
-docker compose up --build
-
-# Or manually
-docker build -t queuestorm-copilot .
-docker run -p 3000:3000 -e OPENAI_API_KEY=your_key queuestorm-copilot
-```
 
 ## API Endpoints
 
