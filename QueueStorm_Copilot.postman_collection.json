@@ -2,13 +2,13 @@
   "info": {
     "_postman_id": "queuestorm-copilot-v1",
     "name": "QueueStorm Copilot API",
-    "description": "Complete API test collection for QueueStorm Copilot — AI-powered fintech complaint investigation service.\n\n## Base URL\nhttp://localhost:3000\n\n## What This Tests\n- Health endpoint\n- All case types (wrong_transfer, payment_failed, phishing, etc.)\n- Evidence verdict scenarios (consistent, inconsistent, insufficient_data)\n- Safety rule violations (PIN/OTP/refund confirmation detection)\n- Prompt injection resistance\n- Multilingual complaints (Bangla, Banglish)\n- Schema validation (400, 404, 422 errors)\n\n## Safety Rules Checked\n- customer_reply must NEVER ask for PIN, OTP, password\n- customer_reply must NEVER confirm a refund\n- customer_reply must NEVER redirect to unofficial channels\n\n## Enum Values\n### case_type\nwrong_transfer, payment_failed, refund_request, duplicate_payment, merchant_settlement_delay, agent_cash_in_issue, phishing_or_social_engineering, other\n\n### department\ncustomer_support, dispute_resolution, payments_ops, merchant_operations, agent_operations, fraud_risk\n\n### evidence_verdict\nconsistent, inconsistent, insufficient_data\n\n### severity\nlow, medium, high, critical",
+    "description": "Complete API test collection for QueueStorm Copilot — AI-powered fintech complaint investigation service.\n\n## Base URL\nironbuildssubmission.duckdns.org\n\n## What This Tests\n- Health endpoint\n- All case types (wrong_transfer, payment_failed, phishing, etc.)\n- Evidence verdict scenarios (consistent, inconsistent, insufficient_data)\n- Safety rule violations (PIN/OTP/refund confirmation detection)\n- Prompt injection resistance\n- Multilingual complaints (Bangla, Banglish)\n- Schema validation (400, 404, 422 errors)\n\n## Safety Rules Checked\n- customer_reply must NEVER ask for PIN, OTP, password\n- customer_reply must NEVER confirm a refund\n- customer_reply must NEVER redirect to unofficial channels\n\n## Enum Values\n### case_type\nwrong_transfer, payment_failed, refund_request, duplicate_payment, merchant_settlement_delay, agent_cash_in_issue, phishing_or_social_engineering, other\n\n### department\ncustomer_support, dispute_resolution, payments_ops, merchant_operations, agent_operations, fraud_risk\n\n### evidence_verdict\nconsistent, inconsistent, insufficient_data\n\n### severity\nlow, medium, high, critical",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
     {
       "key": "base_url",
-      "value": "http://localhost:3000",
+      "value": "ironbuildssubmission.duckdns.org",
       "type": "string",
       "description": "Base URL of the QueueStorm Copilot service"
     }

@@ -6,6 +6,10 @@ An AI-powered complaint investigation API for fintech support teams. Built for t
 
 Accepts customer support tickets with transaction history, investigates whether the complaint is supported by transaction data, and returns structured routing and response guidance — safely.
 
+## Base Url
+
+ironbuildssubmission.duckdns.org
+
 ## Importing and Evaluating Postman Collection
 
 1. Open Postman and click **Import** in the top-left corner.  
@@ -22,7 +26,7 @@ Accepts customer support tickets with transaction history, investigates whether 
 
 | Component | Technology |
 |-----------|-----------|
-| Runtime | Node.js 20 (LTS) |
+| Runtime | Node.js 24 (LTS) |
 | Framework | Express.js 4.x |
 | AI Engine | `gpt-oss-120b-free` |
 | Validation | Zod |
@@ -60,7 +64,7 @@ npm install
 
 # Configure environment
 cp .env.example .env
-# Edit .env and add your OPENAI_API_KEY
+# Edit .env and add your OPENROUTER_API_KEY
 
 # Start development server
 npm run dev
