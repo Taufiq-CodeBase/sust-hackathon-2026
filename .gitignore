@@ -1,3 +1,11 @@
+node_modules/
+.env
+*.log
+coverage/
+.DS_Store
+dist/
+
+
 # Dependencies
 node_modules/
 jspm_packages/
